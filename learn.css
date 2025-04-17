@@ -1,0 +1,498 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  color: #ffffff;
+  background-color: #0a0a0a;
+}
+
+/* Header styling */
+.header {
+  width: 100%;
+  z-index: 100;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0a0a0a;
+  padding: 16px 32px;
+  border-bottom: 1px solid #222;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.tinder-logo {
+  position: relative;
+}
+
+.tinder-logo img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+
+.tinder-logo:hover::before,
+.tinder-logo:hover::after {
+  content: "❤️";
+  position: absolute;
+  font-size: 12px;
+  animation: floating 2s ease-in-out infinite;
+}
+
+.tinder-logo:hover::before {
+  top: -15px;
+  right: 0;
+  animation-delay: 0.3s;
+}
+
+.tinder-logo:hover::after {
+  top: -10px;
+  right: 15px;
+  animation-delay: 0.6s;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-15px) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-30px) scale(1);
+    opacity: 0;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #cccccc;
+}
+
+.right-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.login-btn {
+  background: #ffffff;
+  color: #0a0a0a;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.login-btn:hover {
+  background: #cccccc;
+  transform: translateY(-1px);
+}
+
+/* Intro section */
+.intro {
+  text-align: center;
+  padding: 120px 20px 50px;
+  background: #0a0a0a;
+}
+
+.intro h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.intro p {
+  max-width: 700px;
+  margin: 20px auto;
+  font-size: 18px;
+  color: #cccccc;
+  line-height: 1.6;
+}
+
+.join-btn {
+  margin-top: 30px;
+  padding: 12px 32px;
+  font-size: 16px;
+  background: #ffffff;
+  color: #0a0a0a;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.join-btn:hover {
+  background: #cccccc;
+  transform: translateY(-2px);
+}
+
+/* Features section */
+.features-section {
+  padding: 60px 20px;
+  background: #0a0a0a;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-row {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+.feature-col {
+  flex: 0 0 auto;
+  width: 400px;
+  max-width: 400px;
+}
+
+.feature-col h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.feature-col h2:first-child {
+  margin-top: 0;
+}
+
+.feature-col p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #cccccc;
+  margin-bottom: 25px;
+}
+
+.feature-col img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  margin: 20px 0;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.feature-col img:hover {
+  transform: scale(1.02);
+}
+
+.feature-col img.beach-couple {
+  height: 520px;
+}
+
+/* CTA Section */
+.cta-section {
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+  background-color: #0a0a0a;
+}
+
+.btn-get-started {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #0a0a0a;
+  font-weight: 600;
+  padding: 15px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.btn-get-started:hover {
+  background-color: #cccccc;
+  transform: translateY(-2px);
+}
+
+/* Footer Styles */
+.main-footer {
+  background-color: #0a0a0a;
+  border-top: 1px solid #222;
+  padding: 40px 0 20px;
+  font-size: 14px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+  padding-right: 20px;
+}
+
+.footer-column h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #cccccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #ffffff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #cccccc;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+}
+
+/* App download section */
+.footer-download {
+  margin-bottom: 40px;
+}
+
+.footer-download p {
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.app-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.app-buttons a {
+  display: inline-block;
+  padding: 8px 20px;
+  background: #ffffff;
+  color: #0a0a0a;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.app-buttons a:hover {
+  background: #cccccc;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  border-top: 1px solid #222;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+
+.footer-links a {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 12px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.divider {
+  color: #333;
+}
+
+.copyright {
+  color: #cccccc;
+  font-size: 12px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+  .feature-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-col {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .feature-col img.beach-couple,
+  .feature-col img.london-phone,
+  .feature-col img.friend-group {
+    height: auto;
+    max-height: 400px;
+  }
+
+  .intro h2 {
+    font-size: 28px;
+  }
+
+  .intro p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 12px 20px;
+  }
+
+  .logo img {
+    height: 30px;
+  }
+
+  .nav a {
+    margin: 0 10px;
+    font-size: 13px;
+  }
+
+  .right-header {
+    gap: 15px;
+  }
+
+  .login-btn {
+    padding: 6px 15px;
+    font-size: 13px;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+  }
+
+  .footer-column {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+
+  .app-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav {
+    display: none; /* Ẩn navigation trên mobile */
+  }
+
+  .right-header {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro {
+    padding: 100px 15px 40px;
+  }
+
+  .features-section {
+    padding: 40px 15px;
+  }
+
+  .feature-col h2 {
+    font-size: 20px;
+  }
+
+  .join-btn,
+  .btn-get-started {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+}

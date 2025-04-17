@@ -1,0 +1,426 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #ffffff;
+  background-color: #0a0a0a;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  background-color: transparent;
+}
+
+.logo a {
+  display: inline-block;
+  color: #ffffff;
+}
+
+.back-link a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.back-link a:hover {
+  color: #cccccc;
+}
+
+/* Main content */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+}
+
+/* Hero section */
+.hero {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.search-container {
+  position: relative;
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+.search-input {
+  width: 100%;
+  padding: 15px 15px 15px 45px;
+  border: none;
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #333;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.3s;
+  color: #ffffff;
+}
+
+.search-input:focus {
+  outline: none;
+  border-bottom: 2px solid #ffffff;
+  background-color: #222222;
+}
+
+.search-input::placeholder {
+  color: #666;
+}
+
+/* Categories */
+.categories {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+.category-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.category-card {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  padding: 15px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.category-card h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Category card backgrounds */
+.guide {
+  background-color: #333333;
+}
+
+.troubleshooting {
+  background-color: #404040;
+}
+
+.security {
+  background-color: #4d4d4d;
+}
+
+.safety {
+  background-color: #595959;
+}
+
+/* Hover effects for category cards */
+.guide:hover,
+.troubleshooting:hover,
+.security:hover,
+.safety:hover {
+  background-color: #666666;
+}
+
+/* Footer */
+footer {
+  padding: 20px 0;
+  margin-top: auto;
+  border-top: 1px solid #222;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #cccccc;
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #bdbdbd;
+}
+
+.language-selector i {
+  font-size: 12px;
+  color: #ffffff;
+}
+
+/* Chat button */
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 100;
+}
+
+.chat-button i {
+  color: #0a0a0a;
+  font-size: 20px;
+}
+
+.chat-button:hover {
+  transform: scale(1.05);
+  background-color: #cccccc;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .category-container {
+    flex-direction: column;
+  }
+
+  .category-card {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+}
+/* Container cho mỗi hình ảnh */
+.beach-couple,
+.london-phone,
+.friend-group {
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+/* Hiệu ứng tim cho beach-couple */
+.beach-couple:hover::before,
+.beach-couple:hover::after {
+  content: "❤️";
+  position: absolute;
+  font-size: 24px;
+  animation: floating 2s ease-in-out infinite;
+  z-index: 1;
+}
+
+.beach-couple:hover::before {
+  top: -15px;
+  right: 30%;
+  animation-delay: 0.3s;
+}
+
+.beach-couple:hover::after {
+  top: -10px;
+  right: 40%;
+  animation-delay: 0.6s;
+}
+
+/* Hiệu ứng tim cho london-phone */
+.london-phone:hover::before,
+.london-phone:hover::after {
+  content: "❤️";
+  position: absolute;
+  font-size: 24px;
+  animation: floating 2s ease-in-out infinite;
+  z-index: 1;
+}
+
+.london-phone:hover::before {
+  top: -15px;
+  right: 30%;
+  animation-delay: 0.3s;
+}
+
+.london-phone:hover::after {
+  top: -10px;
+  right: 40%;
+  animation-delay: 0.6s;
+}
+
+/* Hiệu ứng tim cho friend-group */
+.friend-group:hover::before,
+.friend-group:hover::after {
+  content: "❤️";
+  position: absolute;
+  font-size: 24px;
+  animation: floating 2s ease-in-out infinite;
+  z-index: 1;
+}
+
+.friend-group:hover::before {
+  top: -15px;
+  right: 30%;
+  animation-delay: 0.3s;
+}
+
+.friend-group:hover::after {
+  top: -10px;
+  right: 40%;
+  animation-delay: 0.6s;
+}
+
+/* Animation keyframes (nếu chưa có) */
+@keyframes floating {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-15px) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-30px) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Thêm hiệu ứng scale nhẹ khi hover */
+.beach-couple:hover,
+.london-phone:hover,
+.friend-group:hover {
+  transform: scale(1.02);
+}
+/* Logo hover effect */
+.tinder-logo {
+  position: relative;
+  display: inline-block;
+}
+
+.tinder-logo img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+
+.tinder-logo:hover::before,
+.tinder-logo:hover::after {
+  content: "❤️";
+  position: absolute;
+  font-size: 12px;
+  animation: floating 2s ease-in-out infinite;
+  z-index: 1;
+}
+
+.tinder-logo:hover::before {
+  top: -15px;
+  right: 0;
+  animation-delay: 0.3s;
+}
+
+.tinder-logo:hover::after {
+  top: -10px;
+  right: 15px;
+  animation-delay: 0.6s;
+}
+
+/* Animation for hearts */
+@keyframes floating {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-15px) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-30px) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Additional hover effect for the image */
+.tinder-logo:hover img {
+  transform: scale(1.05);
+}

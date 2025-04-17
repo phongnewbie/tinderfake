@@ -1,0 +1,1004 @@
+/* style.css (dark mode version giống Azar) */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #0a0a0a;
+  color: #ffffff;
+}
+a {
+  text-decoration: none;
+}
+.tinder-header-v3 {
+  background-color: transparent;
+  color: #bdbdbd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribute space between left and right sections */
+  padding: 15px 20px;
+}
+
+.login_Button {
+  background-color: white;
+  color: black;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.tinder-logo {
+  margin-right: 20px; /* Add some space between the logo and navigation */
+}
+
+.tinder-logo a {
+  display: flex; /* Ensure the link behaves as a block for width */
+  align-items: center;
+}
+
+.tinder-logo svg {
+  margin-right: 5px;
+}
+.C\(inh\) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.focus-outline-style:focus {
+  outline: none;
+}
+
+.D\(b\) {
+  display: block;
+}
+
+.W\(150px\) {
+  width: 150px;
+}
+
+.Mend\(24px\) {
+  margin-right: 24px;
+}
+
+.Mend\(12px\)--m {
+  @media (max-width: 768px) {
+    margin-right: 12px;
+  }
+}
+.language-selector {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  color: #bdbdbd;
+}
+.Hidden {
+  display: none;
+}
+.navigation_Elements {
+  font-size: 25px;
+  display: flex; /* Arrange navigation links horizontally */
+  align-items: center;
+}
+
+.navigation_Elements a {
+  font-weight: bolder;
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.tinder-logo svg {
+  margin-right: 5px;
+}
+.tinder-actions-v2 {
+  display: flex;
+  align-items: center;
+}
+.hero {
+  display: flex;
+  align-items: flex-start;
+  background: #0a0a0a;
+  position: relative;
+  flex-wrap: wrap;
+  height: 700px;
+}
+.azar-like-counter {
+  background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ tương tự Azar */
+  border-radius: 20px; /* Bo tròn góc */
+  padding: 10px 20px; /* Khoảng cách bên trong */
+  position: absolute; /* Định vị tuyệt đối so với .hero-text */
+  bottom: -30px; /* Điều chỉnh vị trí theo ý muốn */
+  left: 50%;
+  transform: translateX(-50%); /* Căn giữa theo chiều ngang */
+  color: white; /* Màu chữ trắng */
+  font-size: 0.9em; /* Kích thước chữ tương đối */
+  display: flex;
+  align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+}
+
+.hero-text {
+  text-align: center;
+  margin-top: 15vh;
+  width: 45%;
+  position: relative;
+  z-index: 2;
+}
+
+.matching-count {
+  font-size: 28px;
+
+  text-align: center;
+}
+
+.green-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #2ecc71; /* Màu xanh lá cây */
+  border-radius: 50%;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+#counter {
+  margin-right: 5px;
+}
+/* ... Các CSS hiện có ... */
+
+.hero-right {
+  width: 53%;
+  height: 90vh !important;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+
+.column {
+  flex: 1;
+  position: relative;
+  height: 600px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.vertical-slider {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.filter-buttons {
+  position: relative;
+  z-index: 3;
+  margin-left: 5vh;
+  display: flex;
+  gap: 10px;
+  top: 45vh;
+  width: 700px;
+
+  border-radius: 20px;
+}
+.Darlingbol_Content {
+  margin-top: 10vh;
+}
+.filter-button {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7); /* Nền đen mờ hơn */
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.9em;
+  justify-content: center;
+}
+.country-button {
+  background: gray;
+  border-left: 20px;
+  width: 180px;
+}
+.filter-button svg {
+  fill: currentColor; /* Kế thừa màu chữ */
+}
+.gender-button {
+  background: gray;
+  border-left: 20px;
+  width: 180px;
+  height: 50px;
+}
+.gender-button svg:first-child {
+  color: #1e88e5; /* Màu xanh dương cho biểu tượng giới tính nam */
+}
+
+.gender-button svg:nth-child(2) {
+  color: #e91e63; /* Màu hồng cho biểu tượng giới tính nữ */
+}
+
+.country-button svg:first-child {
+  color: #4caf50; /* Màu xanh lá cây cho biểu tượng địa cầu */
+}
+
+.start-chat-button {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.9em;
+  width: 190px;
+}
+
+.profile-images {
+  display: flex;
+}
+.fa-language {
+  margin-right: 10px;
+}
+.profile-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ccc; /* Màu xám tạm thời cho ảnh đại diện */
+  border: 1px solid #eee;
+  box-sizing: border-box;
+}
+
+.download-btn {
+  /* ... Các CSS hiện có của nút tải xuống ... */
+  margin-top: 20px; /* Thêm khoảng cách phía trên nút tải xuống */
+}
+.hero-text h1 {
+  font-size: 3rem;
+  margin: 0px;
+  color: gray;
+}
+.header-left {
+  color: whitesmoke;
+  display: flex;
+  align-items: center; /* Align logo and navigation horizontally */
+}
+.hero-text p {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  color: #ccc;
+}
+
+.download-btn {
+  display: inline-block;
+  background: #00e0c6;
+  color: #000;
+  padding: 12px 28px;
+  border-radius: 32px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background: #00cbb2;
+}
+
+.hero-img {
+  max-width: 450px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 12px;
+}
+
+.features {
+  text-align: center;
+  padding: 60px 10%;
+  background: #121212;
+}
+
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.feature {
+  width: 250px;
+  margin: 20px;
+  text-align: left;
+  color: #ccc;
+}
+
+.footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 30px 20px;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hyperconnect-info {
+  margin-bottom: 20px;
+}
+
+.hyperconnect-info strong {
+  font-size: 1.2em;
+  color: #eee;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.azar-group-family img {
+  height: 18px;
+  vertical-align: middle;
+}
+
+.footer-links {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.footer-links span {
+  color: #666;
+  margin: 0 5px;
+}
+
+.contact-info {
+  margin-bottom: 10px;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-info a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.copyright {
+  margin-bottom: 15px;
+  font-size: 0.9em;
+}
+
+.app-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.app-buttons a {
+  display: inline-block;
+  color: white;
+}
+
+.app-buttons img {
+  height: 40px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #444;
+  color: #ccc;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1em;
+}
+.css-vtra1b {
+  margin-top: 15px;
+}
+.social-icons a:hover {
+  background-color: #555;
+  color: #eee;
+}
+.hero-right {
+  width: 53%;
+  height: 90vh;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+
+.column {
+  flex: 1;
+  position: relative;
+  height: 600px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.vertical-slider {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  flex-direction: column;
+  animation: infiniteScrollUp 15s linear infinite;
+}
+
+.vertical-slider img {
+  height: 100%;
+  width: 100%;
+
+  border-radius: 10px;
+  transition: transform 0.1s;
+  will-change: transform;
+}
+
+.vertical-slider img:hover {
+  z-index: 2;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+/*Flag*/
+
+/* Animation mượt không giật */
+
+/* Cột 2, 3 có delay để tạo hiệu ứng khác nhau */
+.delay1 .slider-track {
+  animation-delay: 1s;
+}
+
+.delay2 .slider-track {
+  animation-delay: 1s;
+}
+
+/*Flag*/
+.image-container {
+  flex-shrink: 0;
+  padding: 5px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.flag_Info {
+  width: 50px;
+}
+.image-container > img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 3/4; /* Tỷ lệ khung hình cố định */
+  object-fit: cover; /* Đảm bảo hình ảnh lấp đầy khung */
+}
+.image-container:hover {
+  transform: translateY(-5px);
+}
+.profile-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  display: flex;
+  align-items: center;
+  padding: 15px 10px 8px;
+  color: white;
+}
+/* === Dưới đây là phần giao diện dưới === */
+.section-bottom {
+  background: #fff;
+  padding: 60px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.phones {
+  display: flex;
+  gap: 20px;
+}
+
+.phones img {
+  width: 130px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.bottom-text {
+  max-width: 400px;
+}
+
+.bottom-text h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.bottom-text p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Style cho phần lá cờ */
+.flag {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.user-info {
+  flex: 1;
+}
+
+.user-info p {
+  margin: 0;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.age {
+  font-size: 14px;
+  opacity: 0.9;
+}
+.vertical-slider .image-container {
+  flex-shrink: 0; /* Ngăn hình ảnh co lại trong container */
+}
+.slider-tracks {
+  display: flex;
+  flex-direction: column;
+  animation: slideDown 15s linear infinite !important;
+}
+
+/* Keyframes cho animation trượt lên vô hạn */
+@keyframes infiniteScrollUp {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.tinder-logo img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.tinder-logo img:hover {
+  transform: scale(1.05);
+}
+/* Mobile */
+@media (max-width: 575px) {
+  .header {
+    padding: 10px;
+  }
+  .matching-count {
+    position: relative;
+    top: 33vh;
+  }
+  .footer {
+    background-color: #1a1a1a;
+    padding: 20px 15px;
+    text-align: center;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  .footer-links a {
+    margin: 0;
+    color: #cccccc;
+    font-size: 14px;
+  }
+  .footer-links span {
+    display: none;
+  }
+  .contact-info {
+    flex-direction: column;
+    gap: 8px;
+    color: #808080;
+  }
+  .contact-info a {
+    margin: 0;
+  }
+  .tinder-header-v3 {
+    padding: 10px;
+  }
+
+  .navigation_Elements {
+    font-size: 18px;
+  }
+
+  .navigation_Elements a {
+    margin-right: 15px;
+  }
+
+  body {
+    height: max-content;
+    width: max-content;
+    overflow-x: hidden;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-text {
+    width: 100%;
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+
+  .hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    padding: 0 15px;
+  }
+  .hero-text h1 {
+    display: none;
+  }
+  .column2 {
+    display: none;
+  }
+
+  .filter-buttons {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+    padding: 10px;
+    background: transparent;
+  }
+
+  .filter-button {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 8px 12px;
+    font-size: 0.85em;
+    min-width: 100px;
+  }
+
+  .country-button,
+  .gender-button {
+    width: auto;
+    min-width: 100px;
+  }
+
+  .download-btn {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+
+  .hero-right {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100% !important;
+    z-index: 1;
+    opacity: 0.3;
+  }
+
+  .column {
+    height: 100%;
+  }
+
+  .vertical-slider {
+    height: 100%;
+  }
+
+  .slider-track {
+    height: 100%;
+  }
+
+  .image-container {
+    margin-bottom: 10px;
+  }
+
+  .profile-info {
+    padding: 10px 8px 6px;
+  }
+
+  .flag {
+    width: 24px;
+    height: 24px;
+  }
+
+  .name {
+    font-size: 14px;
+  }
+
+  .age {
+    font-size: 12px;
+  }
+
+  .azar-like-counter {
+    bottom: -20px;
+    font-size: 0.8em;
+    padding: 8px 15px;
+  }
+
+  .hyperconnect-info {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .hyperconnect-info strong {
+    font-size: 14px;
+    color: #cccccc;
+  }
+
+  .copyright {
+    color: #808080;
+    font-size: 13px;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 10px;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  .hero-text {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .filter-buttons {
+    margin: 20px auto;
+    width: 90%;
+    justify-content: center;
+  }
+
+  .hero-right {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .vertical-slider {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .slider-track {
+    width: 100%;
+  }
+
+  .filter-buttons {
+    margin: 20px auto;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .hero {
+    flex-direction: row;
+    width: 100%;
+    height: 90vh;
+  }
+
+  .hero-text {
+    width: 45%;
+    margin-top: 15vh;
+  }
+
+  .hero-right {
+    width: 53%;
+    position: relative;
+    opacity: 1;
+  }
+}
+
+@media (min-width: 575px) and (max-width: 1199px) {
+  .header {
+    padding: 10px;
+  }
+  .matching-count {
+    position: relative;
+    top: 33vh;
+  }
+  .footer {
+    background-color: #1a1a1a;
+    padding: 20px 15px;
+    text-align: center;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  .footer-links a {
+    margin: 0;
+    color: #cccccc;
+    font-size: 14px;
+  }
+  .footer-links span {
+    display: none;
+  }
+  .contact-info {
+    flex-direction: column;
+    gap: 8px;
+    color: #808080;
+  }
+  .contact-info a {
+    margin: 0;
+  }
+  .tinder-header-v3 {
+    padding: 10px;
+  }
+
+  .navigation_Elements {
+    font-size: 18px;
+  }
+
+  .navigation_Elements a {
+    margin-right: 15px;
+  }
+
+  body {
+    height: max-content;
+    width: max-content;
+    overflow-x: hidden;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-text {
+    width: 100%;
+    text-align: center;
+
+    top: 145vh;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-text h1 {
+    display: none;
+  }
+
+  .hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    padding: 0 15px;
+  }
+
+  .column2 {
+    display: none;
+  }
+
+  .hero-right {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100% !important;
+    z-index: 1;
+    opacity: 0.3;
+  }
+
+  .hyperconnect-info {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .hyperconnect-info strong {
+    font-size: 14px;
+    color: #cccccc;
+  }
+
+  .copyright {
+    color: #808080;
+    font-size: 13px;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .filter-buttons {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+    padding: 10px;
+    background: transparent;
+  }
+}

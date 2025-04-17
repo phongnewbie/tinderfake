@@ -1,0 +1,340 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 45vh;
+  background: linear-gradient(135deg, #ff5566 0%, #ff7752 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 10%; /* Giảm khoảng cách từ bên trái */
+}
+
+.hero img:first-child {
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  color: white;
+
+  font-weight: 600;
+  margin-bottom: 30px;
+  max-width: 400px;
+  line-height: 1.2;
+}
+.hero_Data {
+  width: 530px;
+  position: relative;
+  left: 40%;
+}
+.hero button {
+  background-color: white;
+  color: #424242;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  z-index: 10; /* Đảm bảo nút ở trên cùng */
+}
+
+.hero button:hover {
+  background-color: #f8f8f8;
+  transform: translateY(-2px);
+}
+
+.phone-image {
+  position: absolute;
+  right: 25%; /* Điều chỉnh vị trí sang trái hơn */
+  top: 75%;
+  transform: translateY(-50%);
+  height: 45vh; /* Tăng kích thước */
+  max-height: 650px;
+  z-index: 2;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
+}
+
+.logo svg {
+  height: 40px;
+  width: auto;
+}
+/* Thêm container cho nội dung bên trái để phù hợp hơn với layout trong ảnh */
+.hero-content {
+  position: relative;
+  right: 50px;
+  z-index: 3;
+  max-width: 60%; /* Giới hạn chiều rộng */
+}
+/* Footer Styles */
+.footer {
+  background-color: #f9f9f9;
+  padding: 50px 10% 20px;
+  color: #505965;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 30px;
+}
+
+.footer-column h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #424242;
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.footer-column ul li::before {
+  display: none;
+}
+
+.footer-column ul li a {
+  color: #505965;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-column ul li a:hover {
+  color: #ff4458;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #505965;
+  font-size: 20px;
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: #ff4458;
+}
+
+.footer-download {
+  display: flex;
+
+  align-items: flex-start;
+}
+.footer-download p {
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #424242;
+}
+
+.app-buttons {
+  position: relative;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  bottom: 20px;
+}
+
+.app-buttons a {
+  display: inline-block;
+}
+/* Thiết lập hình ảnh App Store */
+.app-buttons a:first-child img {
+  height: 40px;
+  width: auto;
+}
+/* Thiết lập hình ảnh Google Play */
+.app-buttons a:last-child img {
+  height: 65px;
+  width: 136px; /* Điều chỉnh chiều rộng chính xác để khớp với kích thước của App Store */
+  object-fit: contain;
+}
+#Layer_1 {
+  width: 100px;
+  height: 100px;
+}
+
+.footer-text {
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.footer-text p {
+  margin-bottom: 20px;
+  color: #505965;
+  font-size: 13px;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.footer-logo img {
+  height: 35px;
+}
+
+.subfooter {
+  border-top: 1px solid #e8e8e8;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.subfooter-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.subfooter-links a {
+  color: #505965;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.subfooter-links span {
+  color: #ddd;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #505965;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-column {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .subfooter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .copyright {
+    margin-top: 15px;
+  }
+}
+/* Điều chỉnh khoảng trống giữa text và phone */
+@media (min-width: 1200px) {
+  .hero {
+    padding-left: 8%; /* Giảm padding để đưa text sang trái hơn */
+  }
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .hero-content {
+    max-width: 75%;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    align-items: center;
+    padding: 50px 5%;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+  }
+
+  .phone-image {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    margin-top: 40px;
+    height: auto;
+    max-width: 90%;
+    max-height: 450px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+.info-section {
+  padding: 60px 10%;
+  background-color: white;
+}
+
+.info-section h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.info-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.info-section p:last-child {
+  margin-bottom: 0;
+}
+
+.info-section strong {
+  font-weight: 600;
+}

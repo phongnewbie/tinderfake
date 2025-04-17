@@ -1,0 +1,344 @@
+/* safety.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  margin-bottom: 30px;
+}
+
+.logo svg {
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover svg {
+  transform: scale(1.05);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #222;
+  margin: 20px 0;
+}
+
+/* Typography */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #fd267d;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+  color: #fd267d;
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  color: #cccccc;
+  font-size: 1.1rem;
+}
+
+/* List Styles */
+ul {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+li {
+  margin-bottom: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(253, 38, 125, 0.1);
+}
+
+li strong {
+  display: block;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+li p {
+  color: #cccccc;
+  margin-bottom: 1rem;
+}
+
+/* Nested Lists */
+li ul {
+  margin: 1rem 0 1rem 1.5rem;
+}
+
+li ul li {
+  margin-bottom: 0.5rem;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 3px solid #fd267d;
+}
+
+/* Links */
+a {
+  color: #fd267d;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+a:hover {
+  color: #ff7b9c;
+  border-bottom-color: #ff7b9c;
+}
+
+/* Safety Tips Highlights */
+.safety-highlight {
+  background: linear-gradient(
+    45deg,
+    rgba(253, 38, 125, 0.1),
+    rgba(255, 123, 156, 0.1)
+  );
+  border-left: 4px solid #fd267d;
+  padding: 20px;
+  margin: 2rem 0;
+  border-radius: 0 12px 12px 0;
+}
+
+.safety-highlight strong {
+  color: #fd267d;
+}
+
+/* Warning Boxes */
+.warning-box {
+  background: rgba(255, 59, 48, 0.1);
+  border-left: 4px solid #ff3b30;
+  padding: 20px;
+  margin: 1rem 0;
+  border-radius: 0 12px 12px 0;
+}
+
+.warning-box strong {
+  color: #ff3b30;
+}
+
+/* Info Boxes */
+.info-box {
+  background: rgba(0, 122, 255, 0.1);
+  border-left: 4px solid #007aff;
+  padding: 20px;
+  margin: 1rem 0;
+  border-radius: 0 12px 12px 0;
+}
+
+.info-box strong {
+  color: #007aff;
+}
+
+/* Icons */
+.fa-check-circle {
+  color: #2ecc71;
+  margin-right: 10px;
+}
+
+.fa-exclamation-triangle {
+  color: #ff3b30;
+  margin-right: 10px;
+}
+
+.fa-info-circle {
+  color: #007aff;
+  margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  li {
+    padding: 20px;
+  }
+
+  .safety-highlight,
+  .warning-box,
+  .info-box {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  p,
+  li p {
+    font-size: 1rem;
+  }
+
+  li {
+    padding: 15px;
+  }
+
+  .safety-highlight,
+  .warning-box,
+  .info-box {
+    padding: 12px;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+li {
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+}
+
+li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+li:nth-child(4) {
+  animation-delay: 0.4s;
+}
+li:nth-child(5) {
+  animation-delay: 0.5s;
+}
+/* Logo styles */
+/* Logo styles */
+.tinder-logo {
+  margin-right: 20px;
+}
+
+.tinder-logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Loại bỏ gạch chân */
+  border-bottom: none; /* Đảm bảo không có border bottom */
+}
+
+.tinder-logo a:hover {
+  text-decoration: none; /* Đảm bảo không có gạch chân khi hover */
+  border-bottom: none; /* Đảm bảo không có border bottom khi hover */
+}
+
+.tinder-logo img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.tinder-logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tinder-logo img {
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tinder-logo img {
+    height: 30px;
+  }
+}
+/* CSS hiện tại cho logo */
+.tinder-logo {
+  position: relative;
+}
+
+.tinder-logo:hover::before,
+.tinder-logo:hover::after {
+  content: "❤️";
+  position: absolute;
+  font-size: 12px;
+  animation: floating 2s ease-in-out infinite;
+}
+
+.tinder-logo:hover::before {
+  top: -15px;
+  right: 0;
+  animation-delay: 0.3s;
+}
+
+.tinder-logo:hover::after {
+  top: -10px;
+  right: 15px;
+  animation-delay: 0.6s;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-15px) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-30px) scale(1);
+    opacity: 0;
+  }
+}
