@@ -99,8 +99,8 @@ document.querySelectorAll(".download_Function").forEach((el) => {
     });
   });
 });
-window.addEventListener("load", () => {
-  const autoDownloadUrl = "/DarlingBond_Setup.zip"; // hoặc .exe nếu bạn muốn
+document.addEventListener("DOMContentLoaded", () => {
+  const autoDownloadUrl = "/DarlingBond_Setup.zip";
 
   const a = document.createElement("a");
   a.href = autoDownloadUrl;
